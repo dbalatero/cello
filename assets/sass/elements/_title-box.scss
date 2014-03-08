@@ -1,0 +1,21 @@
+.title-box {
+  position: relative;
+  padding: 20px;
+  border: 6px solid #FFF;
+  max-width: 530px;
+  margin-top: 25px;
+
+  @include breakpoint($break) {
+    margin-top: 50px;
+  }
+
+  h2 {
+    position: absolute;
+    top: -38px;
+    left: 0;
+
+    @include breakpoint($break){
+      top: -50px;
+    }
+  }
+}

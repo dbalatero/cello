@@ -1,0 +1,55 @@
+%btn {
+  display: inline-block;
+  font-size: 32px;
+  padding: 8px 50px;
+  color: $black;
+  @include breakpoint($break) {
+    @include transition(.3s);
+  }
+  
+}
+
+.button {
+  @extend %btn;
+  background: $primary;
+  border: 2px solid $primary;
+
+  &:active {
+    background: none;
+    color: $primary;
+  }
+
+  @include breakpoint($break) {
+    &:hover {
+      background: none;
+      color: $primary;
+    }
+  }
+  
+  
+}
+
+.button-2 {
+  @extend %btn;
+  padding: 8px 20px;
+  background: none;
+  border: 2px solid $black;
+  margin-bottom: 5px;
+  font-size: 24px;
+
+  &:active {
+    background: $black;
+    color: $primary;
+  }
+
+  @include breakpoint($break) {
+    margin-bottom: 25px;
+    padding: 8px 50px;
+    font-size: 32px;
+    &:hover {
+      background: $black;
+      color: $primary;
+    }
+  }
+}
+

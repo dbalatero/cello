@@ -1,0 +1,8 @@
+.credit {
+  border-bottom: none;
+  border-top: 12px solid $grey;
+  padding: 10px 0;
+  text-align: center;
+  @extend %font-2--italic;
+  color: $grey;
+}

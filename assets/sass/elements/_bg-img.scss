@@ -1,0 +1,48 @@
+.bg-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 100%;
+  height: 0;
+}
+
+section {
+  padding: 25px 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+
+  @include breakpoint($break) {
+    padding: 145px 0;
+  }
+
+  &:first-child {
+    padding: 25px 0 0 0;
+    @include breakpoint($break) {
+      padding: 75px 0 0 0;
+    }
+  }
+}
+
+.img-wrap {
+  // @include box-shadow(inset 0 0 50px 30px $black);
+  margin-top: -30px;
+  margin-left: -50px;
+  margin-right: -50px;
+  margin-bottom: -10px;
+
+  @include breakpoint($break2) {
+    margin-top: -150px;
+    margin-left: -130px;
+    margin-right: -130px;
+    margin-bottom: -80px;
+  }
+
+  img {
+    position: relative;
+    z-index: -1;
+    display: block;
+
+  }
+}

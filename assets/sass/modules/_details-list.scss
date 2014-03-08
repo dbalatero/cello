@@ -1,0 +1,25 @@
+.details {
+  li {
+    @extend %font-2--italic;
+    position: relative;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 1.2em;
+    margin-bottom: 1.2em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 3px;
+      height: 16px;
+      width: 16px;
+      @include border-radius(16px);
+      background: $primary;
+    }
+  }
+}

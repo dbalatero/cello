@@ -1,0 +1,20 @@
+.header {
+  text-align: center;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  &:after { // background behind header text
+    position: absolute;
+    content: '';
+    @include background-image(linear-gradient($black 60%, rgba($black,0)));
+    left: -100%;
+    right: -100%;
+    top: 0;
+    bottom: -20px;
+    z-index: -1;
+    // box-shadow: 0 5px 5px rgba($black, .1);
+  }
+}
+

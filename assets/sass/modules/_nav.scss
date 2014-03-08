@@ -1,0 +1,59 @@
+nav {
+  width: 100%;
+  text-align: center;
+  border-top: 6px solid #FFF;
+
+  @include breakpoint($break) {
+    max-width: 1063px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+
+  footer & { // remove border in footer
+    border: none;
+  }
+
+  .header & {
+
+      display: inline-block;
+      // position: absolute;
+      // bottom: 0;
+      // left: 50%;
+      // margin-left: -427px;
+      // width: 854px;
+  }
+  
+  ul {
+    display: inline-block;
+    margin-bottom: -4px; // fixes inline block spacing
+  }
+
+  li {
+    float: left;
+    width: 50%;
+    @include breakpoint($break) {
+      width: auto;
+    }
+
+  }
+
+  a {
+    padding: 20px 30px;
+    display: block;
+    color: #FFF;
+
+    &:active {
+      background: $primary;
+      color: $black;
+    }
+
+    @include breakpoint($break){
+      @include transition(.3s);
+      &:hover {
+        background: $primary;
+        color: $black;
+      }
+    }
+    
+  }
+}
