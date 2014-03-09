@@ -68,7 +68,7 @@ h4 {
   font-weight: bold; }
 
 /* line 14, ../assets/sass/_config.scss */
-h3, .credit, .details li {
+h3, .credit, .details li, .swipe-count {
   font-family: 'Cardo', serif;
   font-style: italic; }
 
@@ -148,18 +148,19 @@ a {
 
 /* line 111, ../assets/sass/_config.scss */
 img {
-  width: 100%; }
+  width: 100%;
+  display: block; }
 
-/* line 115, ../assets/sass/_config.scss */
+/* line 116, ../assets/sass/_config.scss */
 nav {
   font-size: 21px;
   font-variant: small-caps; }
 
-/* line 120, ../assets/sass/_config.scss */
+/* line 121, ../assets/sass/_config.scss */
 .cf {
   clear: both; }
 
-/* line 124, ../assets/sass/_config.scss */
+/* line 125, ../assets/sass/_config.scss */
 section {
   position: relative;
   overflow: hidden;
@@ -362,38 +363,104 @@ nav {
   /* line 16, ../assets/sass/modules/_nav.scss */
   .header nav {
     display: inline-block; }
-  /* line 26, ../assets/sass/modules/_nav.scss */
+  /* line 20, ../assets/sass/modules/_nav.scss */
   nav ul {
     display: inline-block;
     margin-bottom: -4px; }
-  /* line 31, ../assets/sass/modules/_nav.scss */
+  /* line 25, ../assets/sass/modules/_nav.scss */
   nav li {
     float: left;
     width: 50%; }
     @media (min-width: 540px) {
-      /* line 31, ../assets/sass/modules/_nav.scss */
+      /* line 25, ../assets/sass/modules/_nav.scss */
       nav li {
         width: auto; } }
-  /* line 40, ../assets/sass/modules/_nav.scss */
+  /* line 34, ../assets/sass/modules/_nav.scss */
   nav a {
     padding: 20px 30px;
     display: block;
     color: #FFF; }
-    /* line 45, ../assets/sass/modules/_nav.scss */
+    /* line 39, ../assets/sass/modules/_nav.scss */
     nav a:active {
       background: #ffa700;
       color: #0c0c0c; }
     @media (min-width: 540px) {
-      /* line 40, ../assets/sass/modules/_nav.scss */
+      /* line 34, ../assets/sass/modules/_nav.scss */
       nav a {
         -webkit-transition: 0.3s;
         -moz-transition: 0.3s;
         -o-transition: 0.3s;
         transition: 0.3s; }
-        /* line 52, ../assets/sass/modules/_nav.scss */
+        /* line 46, ../assets/sass/modules/_nav.scss */
         nav a:hover {
           background: #ffa700;
           color: #0c0c0c; } }
+
+/* line 9, ../assets/sass/modules/_swipe.scss */
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+  margin: 25px 0; }
+
+/* line 15, ../assets/sass/modules/_swipe.scss */
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+  border: 6px solid #FFF; }
+
+/* line 20, ../assets/sass/modules/_swipe.scss */
+.swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative; }
+
+/* line 29, ../assets/sass/modules/_swipe.scss */
+.swipe-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  background: #ffa700;
+  display: block;
+  height: 40px; }
+  @media (min-width: 540px) {
+    /* line 29, ../assets/sass/modules/_swipe.scss */
+    .swipe-nav {
+      height: 72px; } }
+
+/* line 44, ../assets/sass/modules/_swipe.scss */
+button {
+  background: none;
+  border: none;
+  outline: none; }
+
+/* line 50, ../assets/sass/modules/_swipe.scss */
+.swipe-count {
+  display: inline-block;
+  font-size: 25px;
+  line-height: 40px;
+  color: #0c0c0c; }
+  @media (min-width: 540px) {
+    /* line 50, ../assets/sass/modules/_swipe.scss */
+    .swipe-count {
+      font-size: 50px;
+      line-height: 72px; } }
+
+/* line 63, ../assets/sass/modules/_swipe.scss */
+.swipe-close {
+  position: absolute;
+  right: 0;
+  padding: 0 10px;
+  color: #0c0c0c;
+  line-height: 40px;
+  background: #30302f;
+  color: #FFF; }
+  @media (min-width: 540px) {
+    /* line 63, ../assets/sass/modules/_swipe.scss */
+    .swipe-close {
+      line-height: 72px; } }
 
 /* line 1, ../assets/sass/syntax.scss */
 .highlight {

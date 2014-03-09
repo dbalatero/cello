@@ -1,0 +1,75 @@
+.carousel {
+  // margin-top: -25px;
+  @include breakpoint($break) {
+    // margin-top: -75px;
+  }
+  
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+  margin: 25px 0;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+  border: 6px solid #FFF;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
+$nav-height: 72px;
+$nav-height-small: 40px;
+
+.swipe-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  background: $primary;
+  display: block;
+  height: $nav-height-small;
+
+  @include breakpoint($break) {
+    height: $nav-height;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.swipe-count {
+  display: inline-block;
+  @extend %font-2--italic;
+  font-size: 25px;
+  line-height: $nav-height-small;
+  color: $black;
+
+  @include breakpoint($break) {
+    font-size: 50px;
+    line-height: $nav-height;
+  }
+}
+
+.swipe-close {
+  position: absolute;
+  right: 0;
+  padding: 0 10px;
+  color: $black;
+  line-height: $nav-height-small;
+  background: $grey;
+  color: #FFF;
+
+  @include breakpoint($break) {
+    line-height: $nav-height;
+  }
+}
