@@ -18,7 +18,7 @@
     <!-- endbuild -->
 
   </head>
-  <body ontouchstart="" class="gallery">
+  <body class="gallery">
     <!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -36,6 +36,19 @@
             }).data('Swipe');
             // add slide count
             $('.swipe-count em').html(slider.getNumSlides());
+
+            var closeOnEscape = function (e) {
+                console.log(e.which);
+                if (e.which == 27) { 
+                  $('a.swipe-close').click();
+                }
+            };
+
+            // on gallery open
+            $(document).bind('keyup', closeOnEscape);
+
+            // on gallery close
+            $(document).unbind('keyup', closeOnEscape);
         })
     </script>
 

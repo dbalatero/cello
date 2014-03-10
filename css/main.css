@@ -170,7 +170,7 @@ section {
   @media (min-width: 540px) {
     /* line 125, ../assets/sass/_config.scss */
     section {
-      padding: 65px 0; } }
+      padding: 40px 0; } }
   @media (min-width: 980px) {
     /* line 125, ../assets/sass/_config.scss */
     section {
@@ -181,7 +181,7 @@ section {
     @media (min-width: 540px) {
       /* line 140, ../assets/sass/_config.scss */
       section:first-child {
-        padding: 75px 0 0 0; } }
+        padding: 40px 0 0 0; } }
 
 @font-face {
   font-family: 'cello-icons';
@@ -233,34 +233,39 @@ section {
   .bg-img img {
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: cover;
+    background-size: contain;
     width: 100%;
     height: 100%;
-    content: '';
-    display: none; }
+    content: ''; }
     @media (min-width: 540px) {
       /* line 13, ../assets/sass/elements/_bg-img.scss */
       .bg-img img {
-        background-size: contain;
-        display: block; } }
-    /* line 27, ../assets/sass/elements/_bg-img.scss */
-    #value .bg-img img {
-      background-position: left center; }
+        display: block; }
+        /* line 24, ../assets/sass/elements/_bg-img.scss */
+        #about .bg-img img {
+          background-image: url(/assets/img/cello-2.jpg); }
+        /* line 28, ../assets/sass/elements/_bg-img.scss */
+        #value .bg-img img {
+          background-image: url(/assets/img/cello-3.jpg);
+          background-position: left center; }
+        /* line 33, ../assets/sass/elements/_bg-img.scss */
+        #location .bg-img img {
+          background-image: url(/assets/img/cello-4.jpg); } }
 
-/* line 33, ../assets/sass/elements/_bg-img.scss */
+/* line 40, ../assets/sass/elements/_bg-img.scss */
 .img-wrap {
   margin-top: -30px;
   margin-left: -50px;
   margin-right: -50px;
   margin-bottom: -10px; }
   @media (min-width: 980px) {
-    /* line 33, ../assets/sass/elements/_bg-img.scss */
+    /* line 40, ../assets/sass/elements/_bg-img.scss */
     .img-wrap {
       margin-top: -150px;
       margin-left: -130px;
       margin-right: -130px;
       margin-bottom: -80px; } }
-  /* line 47, ../assets/sass/elements/_bg-img.scss */
+  /* line 54, ../assets/sass/elements/_bg-img.scss */
   .img-wrap img {
     position: relative;
     z-index: -1;
@@ -323,7 +328,7 @@ section {
   border: 6px solid #FFF;
   max-width: 530px;
   margin-top: 25px;
-  background: rgba(12, 12, 12, 0.65); }
+  background: rgba(12, 12, 12, 0.75); }
   @media (min-width: 540px) {
     /* line 1, ../assets/sass/elements/_title-box.scss */
     .title-box {
@@ -436,7 +441,7 @@ nav {
         width: auto; } }
   /* line 34, ../assets/sass/modules/_nav.scss */
   nav a {
-    padding: 20px 30px;
+    padding: 20px 29px;
     display: block;
     color: #FFF; }
     /* line 39, ../assets/sass/modules/_nav.scss */
@@ -469,7 +474,7 @@ nav {
   overflow: hidden;
   visibility: hidden;
   position: relative;
-  margin: 25px 0; }
+  margin: 50px 0; }
 
 /* line 21, ../assets/sass/modules/_swipe.scss */
 .swipe-wrap {

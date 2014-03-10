@@ -10,22 +10,29 @@
     height: 100%;
   }
 
-  img {
+  img { // background images
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: cover;
+    background-size: contain;
     width: 100%;
     height: 100%;
     content: '';
-    display: none;
 
     @include breakpoint($break) {
-      background-size: contain;
       display: block;
-    }
 
-    #value & {
-      background-position: left center;
+      #about & {
+        background-image: url(/assets/img/cello-2.jpg);
+      }
+
+      #value & {
+        background-image: url(/assets/img/cello-3.jpg);
+        background-position: left center;
+      }
+
+      #location & {
+        background-image: url(/assets/img/cello-4.jpg);
+      }
     }
   }
 }

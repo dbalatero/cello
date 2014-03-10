@@ -130,7 +130,7 @@ section {
   border-bottom: 12px solid $grey;
 
   @include breakpoint($break) {
-    padding: 65px 0;
+    padding: 40px 0;
   }
 
   @include breakpoint($break2) {
@@ -140,7 +140,7 @@ section {
   &:first-child {
     padding: 25px 0 0 0;
     @include breakpoint($break) {
-      padding: 75px 0 0 0;
+      padding: 40px 0 0 0;
     }
   }
 }
