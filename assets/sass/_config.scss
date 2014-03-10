@@ -123,8 +123,24 @@ nav {
 }
 
 section {
-  // padding: 145px 0;
+  padding: 25px 0;
+  display: block;
   position: relative;
   overflow: hidden;
   border-bottom: 12px solid $grey;
+
+  @include breakpoint($break) {
+    padding: 65px 0;
+  }
+
+  @include breakpoint($break2) {
+    padding: 145px 0;
+  }
+
+  &:first-child {
+    padding: 25px 0 0 0;
+    @include breakpoint($break) {
+      padding: 75px 0 0 0;
+    }
+  }
 }

@@ -162,9 +162,26 @@ nav {
 
 /* line 125, ../assets/sass/_config.scss */
 section {
+  padding: 25px 0;
+  display: block;
   position: relative;
   overflow: hidden;
   border-bottom: 12px solid #30302f; }
+  @media (min-width: 540px) {
+    /* line 125, ../assets/sass/_config.scss */
+    section {
+      padding: 65px 0; } }
+  @media (min-width: 980px) {
+    /* line 125, ../assets/sass/_config.scss */
+    section {
+      padding: 145px 0; } }
+  /* line 140, ../assets/sass/_config.scss */
+  section:first-child {
+    padding: 25px 0 0 0; }
+    @media (min-width: 540px) {
+      /* line 140, ../assets/sass/_config.scss */
+      section:first-child {
+        padding: 75px 0 0 0; } }
 
 @font-face {
   font-family: 'cello-icons';
@@ -216,47 +233,34 @@ section {
   .bg-img img {
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 100%;
-    content: ''; }
-    /* line 21, ../assets/sass/elements/_bg-img.scss */
+    content: '';
+    display: none; }
+    @media (min-width: 540px) {
+      /* line 13, ../assets/sass/elements/_bg-img.scss */
+      .bg-img img {
+        background-size: contain;
+        display: block; } }
+    /* line 27, ../assets/sass/elements/_bg-img.scss */
     #value .bg-img img {
       background-position: left center; }
 
-/* line 27, ../assets/sass/elements/_bg-img.scss */
-section {
-  padding: 25px 0;
-  display: block;
-  position: relative;
-  overflow: hidden;
-  position: relative; }
-  @media (min-width: 540px) {
-    /* line 27, ../assets/sass/elements/_bg-img.scss */
-    section {
-      padding: 145px 0; } }
-  /* line 38, ../assets/sass/elements/_bg-img.scss */
-  section:first-child {
-    padding: 25px 0 0 0; }
-    @media (min-width: 540px) {
-      /* line 38, ../assets/sass/elements/_bg-img.scss */
-      section:first-child {
-        padding: 75px 0 0 0; } }
-
-/* line 46, ../assets/sass/elements/_bg-img.scss */
+/* line 33, ../assets/sass/elements/_bg-img.scss */
 .img-wrap {
   margin-top: -30px;
   margin-left: -50px;
   margin-right: -50px;
   margin-bottom: -10px; }
   @media (min-width: 980px) {
-    /* line 46, ../assets/sass/elements/_bg-img.scss */
+    /* line 33, ../assets/sass/elements/_bg-img.scss */
     .img-wrap {
       margin-top: -150px;
       margin-left: -130px;
       margin-right: -130px;
       margin-bottom: -80px; } }
-  /* line 60, ../assets/sass/elements/_bg-img.scss */
+  /* line 47, ../assets/sass/elements/_bg-img.scss */
   .img-wrap img {
     position: relative;
     z-index: -1;

@@ -13,32 +13,19 @@
   img {
     background-repeat: no-repeat;
     background-position: right center;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 100%;
     content: '';
+    display: none;
+
+    @include breakpoint($break) {
+      background-size: contain;
+      display: block;
+    }
 
     #value & {
       background-position: left center;
-    }
-  }
-}
-
-section {
-  padding: 25px 0;
-  display: block;
-  position: relative;
-  overflow: hidden;
-  position: relative;
-
-  @include breakpoint($break) {
-    padding: 145px 0;
-  }
-
-  &:first-child {
-    padding: 25px 0 0 0;
-    @include breakpoint($break) {
-      padding: 75px 0 0 0;
     }
   }
 }
