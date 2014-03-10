@@ -1,9 +1,15 @@
 .carousel {
+  border: none;
   // margin-top: -25px;
   @include breakpoint($break) {
     // margin-top: -75px;
   }
   
+}
+
+.slider-container {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .swipe {
@@ -15,12 +21,16 @@
 .swipe-wrap {
   overflow: hidden;
   position: relative;
-  border: 6px solid #FFF;
 }
 .swipe-wrap > div {
   float:left;
   width:100%;
   position: relative;
+
+  img {
+    border: 6px solid #FFF;
+  }
+  
 }
 
 $nav-height: 72px;
@@ -41,18 +51,65 @@ $nav-height-small: 40px;
   }
 }
 
+.controls {
+  width: 60%;
+  display: inline-block;
+
+  @include breakpoint($break) {
+
+  }
+
+  .previous,
+  .next {
+    width: 35%;
+
+    &:active {
+      color: $light-grey;
+    }
+    @include breakpoint($break) {
+      &:hover {
+        color: $light-grey;
+      }
+    }
+    
+  }
+
+  .previous {
+    float: left;
+  }
+  .next {
+    float: right;
+  }
+}
+
 button {
   background: none;
   border: none;
   outline: none;
+  padding: 0;
+  margin: 0;
+
+  line-height: 40px;
+  font-size: 40px;
+
+  @include breakpoint($break) {
+    line-height: 72px;
+    font-size: 50px;
+  }
+  
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .swipe-count {
-  display: inline-block;
   @extend %font-2--italic;
   font-size: 25px;
   line-height: $nav-height-small;
   color: $black;
+  float: left;
+  width: 30%;
 
   @include breakpoint($break) {
     font-size: 50px;
@@ -63,11 +120,44 @@ button {
 .swipe-close {
   position: absolute;
   right: 0;
-  padding: 0 10px;
   color: $black;
   line-height: $nav-height-small;
   background: $grey;
   color: #FFF;
+  display: block;
+  width: 40px;
+
+  @include breakpoint($break) {
+    width: 70px;
+  }
+
+  &:active {
+    color: $primary;
+    background: $light-grey;
+  }
+
+  @include breakpoint($break) {
+    &:hover {
+      color: $primary;
+      background: $light-grey;
+    }
+  }
+
+  i {
+    float: left;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+
+
+    @include breakpoint($break) {
+      font-size: 50px;
+      line-height: 72px;
+      width: 72px;
+    }
+    
+  }
 
   @include breakpoint($break) {
     line-height: $nav-height;

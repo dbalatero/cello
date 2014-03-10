@@ -18,7 +18,7 @@
     <!-- endbuild -->
 
   </head>
-  <body>
+  <body ontouchstart="" class="gallery">
     <!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -30,9 +30,8 @@
         $(document).ready(function(){
             slider = $('#slider').Swipe({
                 callback: function(index, elem) {
-                    index = index + 1;
                     // slide number
-                    $('.swipe-count span').html(index);
+                    $('.swipe-count span').html(index + 1);
                 }
             }).data('Swipe');
             // add slide count

@@ -4,6 +4,7 @@
   border: 6px solid #FFF;
   max-width: 530px;
   margin-top: 25px;
+  background: rgba($black, .65);
 
   @include breakpoint($break) {
     margin-top: 50px;
@@ -18,4 +19,8 @@
       top: -50px;
     }
   }
+}
+
+.title-box--right {
+  float: right;
 }
