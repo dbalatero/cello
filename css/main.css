@@ -243,14 +243,14 @@ section {
         display: block; }
         /* line 24, ../assets/sass/elements/_bg-img.scss */
         #about .bg-img img {
-          background-image: url(/assets/img/cello-2.jpg); }
+          background-image: url(../assets/img/cello-2.jpg); }
         /* line 28, ../assets/sass/elements/_bg-img.scss */
         #value .bg-img img {
-          background-image: url(/assets/img/cello-3.jpg);
+          background-image: url(../assets/img/cello-3.jpg);
           background-position: left center; }
         /* line 33, ../assets/sass/elements/_bg-img.scss */
         #location .bg-img img {
-          background-image: url(/assets/img/cello-4.jpg); } }
+          background-image: url(../assets/img/cello-4.jpg); } }
 
 /* line 40, ../assets/sass/elements/_bg-img.scss */
 .img-wrap {
