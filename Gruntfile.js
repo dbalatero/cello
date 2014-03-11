@@ -7,51 +7,33 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     responsive_images: {
-      thumb: {
+      prod: {
         options: {
           sizes: [,{
             name: '@1x',
-            width: 744,
+            width: 1000,
+            quality: 90
           },{
             name: 'small',
-            width: 366
+            width: 600,
+            quality: 80
           },{
             name: "small",
-            width: 732,
-            suffix: "@x2"
+            width: 1200,
+            suffix: "@2x",
+            quality: 80
           },{
             name: '@2x',
-            width: 1488
+            width: 2000,
+            quality: 90
           }]
+          
         },
         files: [{
           expand: true,
-          src: ['projects/**/thumb/*.{jpg,gif,png}'],
-          cwd: 'assets/img/_source/',
-          dest: 'assets/img/'
-        }]
-      },detail: {
-        options: {
-          sizes: [,{
-            name: '@1x',
-            width: 1488,
-          },{
-            name: 'small',
-            width: 744
-          },{
-            name: "small",
-            width: 1488,
-            suffix: "@x2"
-          },{
-            name: '@2x',
-            width: 3696
-          }]
-        },
-        files: [{
-          expand: true,
-          src: ['projects/**/detail/*.{jpg,gif,png}'],
-          cwd: 'assets/img/_source/',
-          dest: 'assets/img/'
+          src: ['*.{jpg,gif,png}'],
+          cwd: 'assets/img/gallery/_source/',
+          dest: 'assets/img/gallery/'
         }]
       }
     },
@@ -80,12 +62,11 @@ module.exports = function(grunt) {
         tasks: ['compass:dev']
       }, // sass
       html: {
-        files: ['*.html', '_layouts/*.html', '_includes/*.html', 
-                'blog/*.html', 'approach/*.html', 'contact/*.html', 'projects/*.html']
+        files: ['*.html', '_layouts/*.html', '_includes/*.html']
       }, // html
     }
   }) // init config
-  grunt.registerTask('images', [ 'responsive_images:thumb', 'responsive_images:detail']);
+  grunt.registerTask('images', 'responsive_images:prod');
   grunt.registerTask('default', 'watch');
   
 }; //exports
