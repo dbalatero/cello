@@ -1,6 +1,6 @@
-name: For Sale -  1969 Latvian Cello
+name: For Sale - 1969 Latvian Cello
 markdown: redcarpet
 pygments: true
-url: "http://joshuarule.github.io/cello/"
-baseurl: "/cello"
+url: "http://cello.davidbalatero.com"
+baseurl: "/"
 permalink: none
