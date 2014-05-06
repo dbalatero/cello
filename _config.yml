@@ -4,3 +4,5 @@ pygments: true
 url: "http://cello.davidbalatero.com"
 baseurl: ""
 permalink: none
+exclude:
+  - vendor
